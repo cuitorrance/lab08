@@ -4,7 +4,7 @@
 #define CUSTOMITEM_H
 
 #include "IceCreamItem.h"
-#include "IceCreamItem.cpp"
+//#include "IceCreamItem.cpp"
 #include <map>
 
 class CustomItem : public IceCreamItem

@@ -1,6 +1,7 @@
 #include "CustomItem.h"
+#include <math.h>
 
-CustomItem::CustomItem(std::string size){
+CustomItem::CustomItem(std::string size) : IceCreamItem::IceCreamItem(size){
   this->size = size;
   if (size == "small")
     {
@@ -20,13 +21,15 @@ CustomItem::~CustomItem(){
 }
 
 std::string CustomItem::composeItem(){
-  string ans = "Custom Size: " + size + "\n"
-    + "Toppings:" + "\n";
-}
+  std::string ans = "Custom Size: " + size + "\n"
+    + "Toppings:" + "\n"
+    + "Price: $" +std::to_string(getPrice()) + "\n";
 
+  return ans;
+}
 double CustomItem::getPrice(){
-  return price;
+  return (round(price*100))/100;
 }
-
 void CustomItem::addTopping(std::string topping){
+  
 }

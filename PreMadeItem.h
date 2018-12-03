@@ -1,7 +1,7 @@
 #ifndef PREMADEITEM_H
 #define PREMADEITEM_H
 
-#include "IceCreamItem.cpp"
+#include "IceCreamItem.h"
 
 class PreMadeItem : public IceCreamItem
 {
