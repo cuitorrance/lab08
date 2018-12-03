@@ -5,7 +5,7 @@
 
 #include "IceCreamItem.h"
 #include "IceCreamItem.cpp"
-#include <string>
+#include <map>
 
 class CustomItem : public IceCreamItem
 {
@@ -13,6 +13,10 @@ class CustomItem : public IceCreamItem
   CustomItem(std::string size);
   virtual ~CustomItem();
   void addTopping(std::string topping);
+  virtual std::string composeItem();
+  virtual double getPrice();
+ private:
+  std::map<std::string,int> toppings;
 };
 
 #endif
